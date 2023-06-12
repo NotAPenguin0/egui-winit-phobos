@@ -1,6 +1,6 @@
 [package]
 name = "egui-winit-phobos"
-version = "0.2.1"
+version = "0.9.1"
 edition = "2021"
 description = "egui integration library for phobos + winit"
 license = "MIT/Apache-2.0"
