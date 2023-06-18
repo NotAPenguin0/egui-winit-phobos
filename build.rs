@@ -62,7 +62,7 @@ fn main() {
     println!("cargo:rerun-if-changed=src/shaders/src/vert.hlsl");
     println!("cargo:rerun-if-changed=src/shaders/src/frag.hlsl");
 
-    compile_hlsl(
+    /*compile_hlsl(
         "src/shaders/src/vert.hlsl".as_ref(),
         "src/shaders/spv/vert.spv".as_ref(),
         Stage::Vertex,
@@ -74,4 +74,5 @@ fn main() {
         Stage::Fragment,
     )
         .unwrap();
+     */
 }
