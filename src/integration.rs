@@ -29,8 +29,10 @@ pub struct Integration<A: Allocator + 'static> {
 
 impl<A: Allocator + 'static> Integration<A> {
     fn bytes_to_spirv(buffer: &[u8]) -> Vec<u32> {
-        let (_, binary, _) = unsafe { buffer.align_to::<u32>() };
-        Vec::from(binary)
+        buffer
+            .chunks_exact(4)
+            .map(|x| u32::from_le_bytes(x.try_into().unwrap()))
+            .collect()
     }
 
     pub fn new<T>(
