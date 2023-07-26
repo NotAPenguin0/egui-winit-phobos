@@ -1,12 +1,12 @@
 [package]
 name = "egui-winit-phobos"
-version = "0.9.3"
+version = "0.10.0"
 edition = "2021"
 description = "egui integration library for phobos + winit"
 license = "MIT/Apache-2.0"
 
 [dependencies]
-phobos = { version = "0.9.2", features = ["shader-reflection"] }
+phobos = { version = "0.10.0", features = ["shader-reflection"] }
 anyhow = "1.0.53"
 egui = "0.21.0"
 egui-winit = "0.21.0"
